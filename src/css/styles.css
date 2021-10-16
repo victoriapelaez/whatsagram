@@ -1,28 +1,35 @@
 .messaging-area{
-    width: 1200px;
-    height: 500px;
-    background-color: rgb(197, 238, 240);
+    width: 800px;
+    height: 300px;
+    background-color: rgb(211, 191, 214);
     
 }
 .text-area{
-width: 1200px;
-height: 200px;
-background-color: cornsilk;
+    display: flex;
+width: 800px;
+height: 50px;
+background-color: PowderBlue;
+
 }
 .keyboard-area{
-    width: 1200px;
-    height: 500px;
+    width: 800px;
+    height: 200px;
     background-color: darkseagreen;
 }
 .space{
-    width: 380px;
+    width: 150px;
 }
 input{
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 13px;
 }
 .recuadro-escribir{
-    width: 1000px;
+    width: 650px;
+    height: 25px;
+    background-color: white;
+    padding: 3px 10px;
+  border: PowderBlue 5px solid;
+  border-radius: 20px;
 }

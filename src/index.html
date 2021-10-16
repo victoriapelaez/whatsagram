@@ -7,70 +7,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whatsagram</title>
     <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 
 <body>
     <main>
-        <div class="messaging-area">
-
+        <div class="messaging-area" id="messaging-area">
         </div>
         <div class="text-area">
             <input type="button" name="Emoticonos" value="Emoji">
-            <input class="recuadro-escribir">
-            <input type="button" name="Enviar" value="Enviar">
+            <input class="recuadro-escribir" id="recuadro-escribir"></input>
+            <input type="button" name="Enviar" value="Enviar" id="enviar">
         </div>
         <div class="keyboard-area">
-            <input type="button" value="a">
-            <input type="button" value="b">
-            <input type="button" value="c">
-            <input type="button" value="d">
-            <input type="button" value="e">
-            <input type="button" value="f">
-            <input type="button" value="g">
-            <input type="button" value="h">
-            <input type="button" value="i">
-            <input type="button" value="j">
-            <input type="button" value="k">
-            <input type="button" value="l">
-            <input type="button" value="m">
-            <input type="button" value="n">
-            <input type="button" value="ñ">
-            <input type="button" value="o">
-            <input type="button" value="p">
-            <input type="button" value="q">
-            <input type="button" value="r">
-            <input type="button" value="s">
-            <input type="button" value="t">
-            <input type="button" value="u">
-            <input type="button" value="v">
-            <input type="button" value="w">
-            <input type="button" value="x">
-            <input type="button" value="y">
-            <input type="button" value="z">
-            <input type="button" value="1">
-            <input type="button" value="2">
-            <input type="button" value="3">
-            <input type="button" value="4">
-            <input type="button" value="5">
-            <input type="button" value="6">
-            <input type="button" value="7">
-            <input type="button" value="8">
-            <input type="button" value="9">
-            <input type="button" value=".">
-            <input type="button" value=",">
-            <input type="button" value="C">
-            <input type="button" value="CE">
-            <input type="button" value="?">
-            <input type="button" value="!">
-            <input type="button" value="+">
-            <input type="button" value="-">
-            <input type="button" value=":">
-            <input type="button" value="/">
-            <input type="button" value="space" class="space">
-            <input type="button" value="←">
-            <input type="button" value="→">
-            <input type="button" value="↵">
-            
+            <div>
+                <!--hacer clase igual para cada input control aalt flecha abajo-->
+                <input type="button" value="!" id="!" class="letra">
+                <input type="button" value="1" id="1" class="letra">
+                <input type="button" value="2" id="2" class="letra">
+                <input type="button" value="3" id="3" class="letra">
+                <input type="button" value="4" id="4" class="letra">
+                <input type="button" value="5" id="5" class="letra">
+                <input type="button" value="6" id="6" class="letra">
+                <input type="button" value="7" id="7" class="letra">
+                <input type="button" value="8" id="8" class="letra">
+                <input type="button" value="9" id="9" class="letra">
+                <input type="button" value="0" id="0" class="letra">
+                <input type="button" value="?" id="?" class="letra">
+                <input type="button" value="←" id="←" >
+            </div>
+            <div>
+                <input type="button" value="q" id="q" class="letra">
+                <input type="button" value="w" id="w" class="letra">
+                <input type="button" value="e" id="e" class="letra">
+                <input type="button" value="r" id="r" class="letra">
+                <input type="button" value="t" id="t" class="letra">
+                <input type="button" value="y" id="y" class="letra">
+                <input type="button" value="u" id="u" class="letra">
+                <input type="button" value="i" id="i" class="letra">
+                <input type="button" value="o" id="o" class="letra">
+                <input type="button" value="p" id="p" class="letra">
+                <input type="button" value="+" id="+" class="letra">
+            </div>
+            <div>
+                <input type="button" value="Mayus" id="Mayus" >
+                <input type="button" value="a" id="a" class="letra">
+                <input type="button" value="s" id="s" class="letra">
+                <input type="button" value="d" id="d" class="letra">
+                <input type="button" value="f" id="f" class="letra">
+                <input type="button" value="g" id="g" class="letra">
+                <input type="button" value="h" id="h" class="letra">
+                <input type="button" value="j" id="j" class="letra">
+                <input type="button" value="k" id="k" class="letra">
+                <input type="button" value="l" id="l" class="letra">
+                <input type="button" value="ñ" id="ñ" class="letra">
+                <input type="button" value="↵" id="↵" class="letra">
+            </div>
+            <div>
+                <input type="button" value="z" id="z" class="letra">
+                <input type="button" value="x" id="x" class="letra">
+                <input type="button" value="c" id="c" class="letra">
+                <input type="button" value="v" id="v" class="letra">
+                <input type="button" value="b" id="b" class="letra">
+                <input type="button" value="n" id="n" class="letra">
+                <input type="button" value="m" id="m" class="letra">
+                <input type="button" value="," id="," class="letra">
+                <input type="button" value="." id="." class="letra">
+                <input type="button" value="-" id="-" class="letra">
+            </div>
+            <div>
+                <input type="button" value="C" id="C">
+                <input type="button" value="CE" id="CE">
+                <input type="button" value="space" class="space" id="space">
+                <input type="button" value="→" id="→">
+            </div>
+
+
 
         </div>
 
@@ -78,5 +90,6 @@
 
     </main>
 </body>
+<script src="js/script.js"></script>
 
 </html>
