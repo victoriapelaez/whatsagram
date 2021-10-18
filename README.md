@@ -22,7 +22,7 @@
 - [ ] Importar letra
 - [x] Iconos
 - [ ] Gif
-- [ ] Añadir fecha del dia y hora al enviar mensaje
+- [x] Añadir fecha del dia y hora al enviar mensaje
 
 
 ##### Herramientas usadas externas

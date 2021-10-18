@@ -2,6 +2,7 @@ main {
   display: grid;
   grid-template-columns: 2fr 0.5fr 2fr;
   grid-template-rows: 4fr 0.5fr 2fr;
+  height: 100vh;
 }
 
 .messaging-area {
@@ -13,11 +14,12 @@ main {
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
-  height: 450px;
+  height: 80vh;
   border: rgb(28, 0, 59) 2px solid;
   display: flex;
-  text-align: right;
-  color: white;
+  justify-content: flex-end;
+  padding: 20px;
+  flex-direction: column;
 }
 .text-area {
   grid-column-start: 2;
@@ -37,6 +39,8 @@ main {
   flex-direction: column;
   border: rgb(28, 0, 59) 2px solid;
   background-color: #2b2f30;
+  justify-content: space-around;
+  align-items: center;
 }
 
 input {
@@ -47,7 +51,7 @@ input {
 }
 .recuadro-escribir {
   width: 500px;
-  height: 25px;
+  height: 30px;
   border-radius: 20px;
 }
 .letra {
@@ -58,23 +62,41 @@ input {
   border-radius: 20px;
   margin: 8px;
   font-size: 20px;
-  background-color: #2b2f30;;
+  background-color: #2b2f30;
   inline-size: auto;
-  
 }
 .tecla-funcion {
   width: 70px;
 }
 .space {
-    width: 200px;
-  }
-  .enviar{
-      width: 55px;
-      margin: 8px;
-  }
+  width: 300px;
+}
+.enviar {
+  width: 55px;
+  margin: 8px;
+}
 
-  .fa{
-      background-color: #0D5348;
-      margin: 8px;
+.fa {
+  background-color: #0d5348;
+  margin: 8px;
   font-size: 20px;
-  }
+}
+#recuadro {
+  align-self: flex-end;
+}
+
+#recuadro-fecha {
+  background-color: rgb(185, 231, 189);
+  border-radius: 5px;
+  inline-size: fit-content;
+  align-self: center;
+}
+.message {
+  border-radius: 5px;
+  background-color: rgb(185, 231, 189);
+  padding: 10px;
+  align-self: flex-end;
+  margin: 5px;
+  text-align: right;
+  width: fit-content;
+}

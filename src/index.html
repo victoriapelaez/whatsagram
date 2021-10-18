@@ -14,7 +14,10 @@
 
 <body>
     <main>
+        
         <div class="messaging-area" id="messaging-area">
+            <div id="recuadro-fecha" ></div>
+            <div id="recuadro"></div>
             <!--Recuadro conversacion donde llegan los mensajes-->
         </div>
         <div class="text-area">
@@ -24,12 +27,12 @@
             <!--Recuadro donde se escriben las letras al pulsar-->
             <input type="button" name="Enviar" value="Enviar" id="enviar" class="enviar">
             <!--Boton que envia a la messaging area-->
-            <input type="button" name="micro" value="&#xf130"class="fa"></input>
+            <input type="button" name="micro" value="&#xf130" class="fa"></input>
         </div>
         <div class="keyboard-area">
             <!--teclado-->
             <div class="area-1">
-                <input type="button" value="!" class="letra">
+                <input type="button" value="&#10069" class="letra">
                 <input type="button" value="1" class="letra">
                 <input type="button" value="2" class="letra">
                 <input type="button" value="3" class="letra">
@@ -40,8 +43,8 @@
                 <input type="button" value="8" class="letra">
                 <input type="button" value="9" class="letra">
                 <input type="button" value="0" class="letra">
-                <input type="button" value="?" class="letra">
-                <input type="button" value="←" id="←" class="tecla-funcion">
+                <input type="button" value="&#10068" class="letra">
+                <input type="button" value="&#11013" id="←" class="tecla-funcion">
                 <!--Tecla borrar primera letra-->
             </div>
             <div class="area-2">
@@ -92,7 +95,7 @@
                 <!--Tecla borra ultima palabra-->
                 <input type="button" value="space" id="space" class="space">
                 <!--Tecla espacio-->
-                <input type="button" value="→" id="→" class="tecla-funcion">
+                <input type="button" value="&#10145" id="→" class="tecla-funcion">
                 <!--Tecla borrar ultima letra-->
             </div>
 
