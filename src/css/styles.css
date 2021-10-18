@@ -1,35 +1,80 @@
-.messaging-area{
-    width: 800px;
-    height: 300px;
-    background-color: rgb(211, 191, 214);
-    
+main {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 2fr;
+  grid-template-rows: 4fr 0.5fr 2fr;
 }
-.text-area{
-    display: flex;
-width: 800px;
-height: 50px;
-background-color: PowderBlue;
 
+.messaging-area {
+  background-size: cover;
+  background-image: url(fondo_oscuro.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 450px;
+  border: rgb(28, 0, 59) 2px solid;
+  display: flex;
+  text-align: right;
+  color: white;
 }
-.keyboard-area{
-    width: 800px;
-    height: 200px;
-    background-color: darkseagreen;
+.text-area {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  background-color: #2b2f30;
+  align-items: center;
 }
-.space{
-    width: 150px;
+.keyboard-area {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: flex;
+  flex-direction: column;
+  border: rgb(28, 0, 59) 2px solid;
+  background-color: #2b2f30;
 }
-input{
-    width: 40px;
-    height: 40px;
-    font-weight: bold;
-    font-size: 13px;
+
+input {
+  width: 38px;
+  height: 38px;
+  font-weight: bold;
+  font-size: 13px;
 }
-.recuadro-escribir{
-    width: 650px;
-    height: 25px;
-    background-color: white;
-    padding: 3px 10px;
-  border: PowderBlue 5px solid;
+.recuadro-escribir {
+  width: 500px;
+  height: 25px;
   border-radius: 20px;
 }
+.letra {
+  background-color: #838588;
+  color: white;
+}
+.emoji {
+  border-radius: 20px;
+  margin: 8px;
+  font-size: 20px;
+  background-color: #2b2f30;;
+  inline-size: auto;
+  
+}
+.tecla-funcion {
+  width: 70px;
+}
+.space {
+    width: 200px;
+  }
+  .enviar{
+      width: 55px;
+      margin: 8px;
+  }
+
+  .fa{
+      background-color: #0D5348;
+      margin: 8px;
+  font-size: 20px;
+  }

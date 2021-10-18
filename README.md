@@ -5,7 +5,7 @@
 
 ### TODO
 
-- [ ] Mardown
+- [x] Mardown
 - [x] Crear base HTML
 - [x] Ordenae teclado *qwerty*
 - [x] Js para escribir letra
@@ -20,7 +20,7 @@
 - [ ] CSS Colores
 - [ ] CSS Botones, forma y tamaño, efectos
 - [ ] Importar letra
-- [ ] Iconos
+- [x] Iconos
 - [ ] Gif
 - [ ] Añadir fecha del dia y hora al enviar mensaje
 
