@@ -10,16 +10,16 @@
 - [x] Ordenae teclado *qwerty*
 - [x] Js para escribir letra
 - [x] Js para escribir frase
-- [ ] Espacio
-- [ ] Función C -> Borrar texto, CE -> Borrar última palabra
+- [x] Espacio
+- [x] Función C -> Borrar texto, CE -> Borrar última palabra
 - [ ] Funciones borrar primer y última letra
 - [ ] Función Majúsculas
-- [ ] Función espacio
+- [x] Función espacio
 - [ ] Función salto de línea
 - [ ] CSS *flexbox*(keyboard) y *grid*(layout), Responsive-centrado
 - [ ] CSS Colores
 - [ ] CSS Botones, forma y tamaño, efectos
-- [ ] Importar letra
+- [x] Importar letra
 - [x] Iconos
 - [ ] Gif
 - [x] Añadir fecha del dia y hora al enviar mensaje

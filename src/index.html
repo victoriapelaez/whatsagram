@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whatsagram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
@@ -14,9 +17,9 @@
 
 <body>
     <main>
-        
+
         <div class="messaging-area" id="messaging-area">
-            <div id="recuadro-fecha" ></div>
+            <div id="recuadro-fecha"></div>
             <div id="recuadro"></div>
             <!--Recuadro conversacion donde llegan los mensajes-->
         </div>
@@ -25,14 +28,14 @@
             <!--Boton con emoticonos-->
             <input class="recuadro-escribir" id="recuadro-escribir"></input>
             <!--Recuadro donde se escriben las letras al pulsar-->
-            <input type="button" name="Enviar" value="Enviar" id="enviar" class="enviar">
+            <input type="button" name="Enviar" value="&#x27A4" id="enviar" class="enviar">
             <!--Boton que envia a la messaging area-->
             <input type="button" name="micro" value="&#xf130" class="fa"></input>
         </div>
         <div class="keyboard-area">
             <!--teclado-->
             <div class="area-1">
-                <input type="button" value="&#10069" class="letra">
+                <input type="button" value="!" class="letra">
                 <input type="button" value="1" class="letra">
                 <input type="button" value="2" class="letra">
                 <input type="button" value="3" class="letra">
@@ -43,7 +46,7 @@
                 <input type="button" value="8" class="letra">
                 <input type="button" value="9" class="letra">
                 <input type="button" value="0" class="letra">
-                <input type="button" value="&#10068" class="letra">
+                <input type="button" value="?" class="letra">
                 <input type="button" value="&#11013" id="←" class="tecla-funcion">
                 <!--Tecla borrar primera letra-->
             </div>
@@ -93,18 +96,12 @@
                 <!--Tecla borra todo el texto-->
                 <input type="button" value="CE" id="CE" class="tecla-funcion">
                 <!--Tecla borra ultima palabra-->
-                <input type="button" value="space" id="space" class="space">
+                <input type="button" value=" " id="space" class="letra">
                 <!--Tecla espacio-->
                 <input type="button" value="&#10145" id="→" class="tecla-funcion">
                 <!--Tecla borrar ultima letra-->
             </div>
-
-
-
         </div>
-
-
-
     </main>
 </body>
 <script src="js/script.js"></script>

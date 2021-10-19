@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 main {
+  font-family: "Roboto", sans-serif;
   display: grid;
   grid-template-columns: 2fr 0.5fr 2fr;
   grid-template-rows: 4fr 0.5fr 2fr;
   height: 100vh;
+  font-weight: bold;
 }
 
 .messaging-area {
@@ -43,60 +47,79 @@ main {
   align-items: center;
 }
 
-input {
-  width: 38px;
-  height: 38px;
+input.letra {
+  font-family: "Roboto", sans-serif;
+  width: 3em;
+  height: 3em;
   font-weight: bold;
-  font-size: 13px;
-}
-.recuadro-escribir {
-  width: 500px;
-  height: 30px;
-  border-radius: 20px;
-}
-.letra {
+  /* font-size: 13px; */
+  border-radius: 5px;
   background-color: #838588;
   color: white;
 }
+.recuadro-escribir {
+  width: 30rem;
+  height: 2rem;
+  border-radius: 20px;
+  background-color: white;
+}
+/* .letra {
+  background-color: #838588;
+  color: white;
+} */
 .emoji {
   border-radius: 20px;
-  margin: 8px;
-  font-size: 20px;
+  margin: 13px;
+  font-size: 1.4em;
   background-color: #2b2f30;
   inline-size: auto;
+  height: 2em;
 }
 .tecla-funcion {
-  width: 70px;
+  width: 6em;
+  height: 2rem;
 }
-.space {
-  width: 300px;
+#space {
+  width: 20em;
+  height: 2rem;
+  background-color: #838588;
 }
 .enviar {
-  width: 55px;
   margin: 8px;
+  background-color: #2522ca;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  color: white;
 }
 
 .fa {
-  background-color: #0d5348;
+  background-color: #127262;
   margin: 8px;
-  font-size: 20px;
+  font-size: 1.2em;
+  border-radius: 20px;
+  color: white;
+  width: 2em;
+  height: 2em;
 }
 #recuadro {
   align-self: flex-end;
 }
 
 #recuadro-fecha {
-  background-color: rgb(185, 231, 189);
-  border-radius: 5px;
-  inline-size: fit-content;
+  background-color: rgb(14, 66, 58);
+  border-radius: 8px;
+  /*inline-size: fit-content;*/
   align-self: center;
+  padding: 2px;
+  color: white;
 }
 .message {
-  border-radius: 5px;
-  background-color: rgb(185, 231, 189);
+  border-radius: 10px;
+  background-color: rgb(14, 66, 58);
   padding: 10px;
   align-self: flex-end;
   margin: 5px;
   text-align: right;
   width: fit-content;
+  color: white;
 }
