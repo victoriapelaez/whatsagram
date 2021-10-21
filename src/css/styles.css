@@ -62,6 +62,9 @@ input.letra {
   height: 2rem;
   border-radius: 20px;
   background-color: white;
+  resize: none;
+  text-align:justify;
+  font-size: 1.3em;
 }
 /* .letra {
   background-color: #838588;
