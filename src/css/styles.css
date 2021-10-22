@@ -139,10 +139,10 @@ input.letra {
 #recuadro-fecha {
   background-color: #127262;
   border-radius: 8px;
-  /*inline-size: fit-content;*/
+  inline-size: fit-content;
   align-self: center;
-  padding: 2px;
   color: white;
+  padding: 0.3em;
 }
 .message {
   border-radius: 10px;
@@ -153,18 +153,25 @@ input.letra {
   text-align: right;
   width: fit-content;
   color: white;
+  display: flex;
 }
-input.clase-mayus {
+.container-recuadros{
+  display: contents;
+}
+.tecla-funcion:hover, .letra:hover{
+  background-color: rgb(37, 37, 92);
+}
+/* input.clase-mayus {
   font-family: "Roboto", sans-serif;
   width: 3em;
   height: 3em;
   font-weight: bold;
-  /* font-size: 13px; */
   border-radius: 5px;
   background-color: #838588;
   color: white;
   text-transform: capitalize;
 }
-.tecla-funcion:hover, .letra:hover{
-  background-color: rgb(37, 37, 92);
-}
+
+.desplegable{
+  display: none;
+} */

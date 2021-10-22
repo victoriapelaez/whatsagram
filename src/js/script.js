@@ -39,20 +39,26 @@ letras.forEach((letra) => {
         " de " +
         date.getFullYear();
       //creacion nodo de texto con hora
-      var nodo = document.createElement("div");
-      nodo.classList.add("message");
-      var nodotexto = document.createTextNode(
-        document.getElementById("recuadro-escribir").value
-      );
-      var nodohorario = document.createTextNode(
-        " " +
-          hour.getHours() +
-          ":" +
-          (hour.getMinutes() < 10 ? `0${hour.getMinutes()}` : hour.getMinutes())
-      );
-      nodo.appendChild(nodotexto);
-      nodo.appendChild(nodohorario);
-      document.getElementById("recuadro").appendChild(nodo);
+
+      let saltoLinea = document
+        .getElementById("recuadro-escribir")
+        .value.replaceAll("\n", "<br>");
+
+      document.querySelector(
+        ".container-recuadros"
+      ).innerHTML += `<div class="message">
+                          <div class="texto-message">${saltoLinea + " "}
+                          </div> 
+                          <div id="recuadro-hora">${
+                          hour.getHours() +
+                          ":" +
+                          (hour.getMinutes() < 10
+                          ? `0${hour.getMinutes()}`
+                          : hour.getMinutes())
+                          }
+                          </div>
+                      </div>
+                `;
       document.getElementById("recuadro-escribir").value = "";
     };
   };
@@ -66,25 +72,21 @@ letras.forEach((letra) => {
     let frase = document.getElementById("recuadro-escribir").value;
     var ultimaPalabra = frase.lastIndexOf(" ");
     frase = frase.substring(0, ultimaPalabra);
-    console.log(frase);
     document.getElementById("recuadro-escribir").value = frase;
   };
 
   //funcion borrar primera letra
   document.getElementById("→").onclick = function () {
     let recuadroInput = document.getElementById("recuadro-escribir").value;
-    let quitarprimera = recuadroInput.substring(1);
-    console.log(quitarprimera);
-    document.getElementById("recuadro-escribir").value = quitarprimera;
+    document.getElementById("recuadro-escribir").value =
+      recuadroInput.substring(1);
   };
 
   //funcion borrar ultima letra
   document.getElementById("←").onclick = function () {
-    //hay q meter aqui texto y poner un return?
     let recuadroInput = document.getElementById("recuadro-escribir").value;
-    let quitarUltima = recuadroInput.substring(0, recuadroInput.length - 1);
-    console.log(quitarUltima);
-    document.getElementById("recuadro-escribir").value = quitarUltima;
+    document.getElementById("recuadro-escribir").value =
+      recuadroInput.substring(0, recuadroInput.length - 1);
   };
 
   //funcion saltos de linea
@@ -105,5 +107,23 @@ letras.forEach((letra) => {
       let newContenido = contenido.toUpperCase()
       console.log(newContenido)
       document.getElementById("recuadro-escribir").value= newContenido  */
+  };
+
+  document.getElementById("emoji").onclick = function () {
+    console.log("hola");
+    let emojis = [
+      "&#128512",
+      "&#128514",
+      "&#128517",
+      "&#128519",
+      "&#128520",
+      "&#128521",
+      "&#128525",
+      "&#128526",
+      "&#128545",
+      "&#128564",
+    ];
+    console.log(emojis);
+    document.getElementById("desplegable").style.display = "flex";
   };
 });

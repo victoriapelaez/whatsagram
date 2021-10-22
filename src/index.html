@@ -25,17 +25,22 @@
             <i class="fas fa-ellipsis-v"></i>
         </div>
         <div class="messaging-area" id="messaging-area">
-            <div id="recuadro-fecha"></div>
-            <div id="recuadro"></div>
+            <div class="container-recuadros">
+                 <div id="recuadro-fecha" ></div>
+               
+            </div>
+
             <!--Recuadro conversacion donde llegan los mensajes-->
             <div class="text-area">
-                <input type="button" name="Emoticonos" value="&#128512" class="emoji">
+                <input type="button" name="Emoticonos" value="&#128512" class="emoji" id="emoji">
+                <div class="desplegable" id="desplegable"></div>
                 <!--Boton con emoticonos-->
                 <textarea class="recuadro-escribir" id="recuadro-escribir" placeholder="Mensaje"></textarea>
                 <!--Recuadro donde se escriben las letras al pulsar-->
                 <input type="button" name="Enviar" value="&#x27A4" id="enviar" class="enviar">
                 <!--Boton que envia a la messaging area-->
                 <input type="button" name="micro" value="&#xf130" class="fa" id="fa"></input>
+
             </div>
         </div>
         <div class="keyboard-area">
