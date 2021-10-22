@@ -42,7 +42,6 @@ i {
   grid-row-start: 2;
   grid-row-end: 3;
   height: 142vh;
-  border: rgb(28, 0, 59) 2px solid;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -63,7 +62,6 @@ i {
   grid-row-end: 5;
   display: flex;
   flex-direction: column;
-  border: rgb(28, 0, 59) 2px solid;
   background-color: #1d1e1f;
   align-items: center;
   row-gap: 0.3em;
