@@ -17,25 +17,29 @@
 
 <body>
     <main>
-
+        <div class="header-area" id="" header-area>
+            <img src="./images/recorte selfie.png">
+            <h2>Antoni Amengual🎨</h2>
+            <i class="fas fa-video"></i>
+            <i class="fa fa-phone"></i>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
         <div class="messaging-area" id="messaging-area">
             <div id="recuadro-fecha"></div>
             <div id="recuadro"></div>
             <!--Recuadro conversacion donde llegan los mensajes-->
-        </div>
-        <div class="text-area">
-            <input type="button" name="Emoticonos" value="&#128512" class="emoji">
-            <!--Boton con emoticonos-->
-            <textarea class="recuadro-escribir" id="recuadro-escribir"></textarea>
-            <!--Recuadro donde se escriben las letras al pulsar-->
-            <input type="button" name="Enviar" value="&#x27A4" id="enviar" class="enviar">
-            <!--Boton que envia a la messaging area-->
-            <input type="button" name="micro" value="&#xf130" class="fa"></input>
+            <div class="text-area">
+                <input type="button" name="Emoticonos" value="&#128512" class="emoji">
+                <!--Boton con emoticonos-->
+                <textarea class="recuadro-escribir" id="recuadro-escribir" placeholder="Mensaje"></textarea>
+                <!--Recuadro donde se escriben las letras al pulsar-->
+                <input type="button" name="Enviar" value="&#x27A4" id="enviar" class="enviar">
+                <!--Boton que envia a la messaging area-->
+                <input type="button" name="micro" value="&#xf130" class="fa" id="fa"></input>
+            </div>
         </div>
         <div class="keyboard-area">
-            <!--teclado-->
             <div class="area-1">
-                <input type="button" value="!" class="letra">
                 <input type="button" value="1" class="letra">
                 <input type="button" value="2" class="letra">
                 <input type="button" value="3" class="letra">
@@ -48,7 +52,6 @@
                 <input type="button" value="0" class="letra">
                 <input type="button" value="?" class="letra">
                 <input type="button" value="&#11013" id="←" class="tecla-funcion">
-                <!--Tecla borrar primera letra-->
             </div>
             <div class="area-2">
                 <input type="button" value="q" class="letra">
@@ -61,11 +64,10 @@
                 <input type="button" value="i" class="letra">
                 <input type="button" value="o" class="letra">
                 <input type="button" value="p" class="letra">
-                <input type="button" value="+" class="letra">
+                <input type="button" value="&#10145" id="→" class="tecla-funcion">
             </div>
             <div class="area-3">
                 <input type="button" value="Mayus" id="Mayus" class="tecla-funcion">
-                <!--Tecla Mayusculas-->
                 <input type="button" value="a" class="letra">
                 <input type="button" value="s" class="letra">
                 <input type="button" value="d" class="letra">
@@ -76,10 +78,9 @@
                 <input type="button" value="k" class="letra">
                 <input type="button" value="l" class="letra">
                 <input type="button" value="ñ" class="letra">
-                <input type="button" value="↵" id="↵" class="tecla-funcion">
-                <!--Tecla salto de linea-->
             </div>
             <div class="area-4">
+                <input type="button" value="↵" id="↵" class="tecla-funcion">
                 <input type="button" value="z" class="letra">
                 <input type="button" value="x" class="letra">
                 <input type="button" value="c" class="letra">
@@ -89,17 +90,14 @@
                 <input type="button" value="m" class="letra">
                 <input type="button" value="," class="letra">
                 <input type="button" value="." class="letra">
-                <input type="button" value="-" class="letra">
             </div>
             <div class="area-5">
                 <input type="button" value="C" id="C" class="tecla-funcion">
                 <!--Tecla borra todo el texto-->
-                <input type="button" value="CE" id="CE" class="tecla-funcion">
-                <!--Tecla borra ultima palabra-->
                 <input type="button" value=" " id="space" class="letra">
                 <!--Tecla espacio-->
-                <input type="button" value="&#10145" id="→" class="tecla-funcion">
-                <!--Tecla borrar ultima letra-->
+                <input type="button" value="CE" id="CE" class="tecla-funcion">
+                <!--Tecla borra ultima palabra-->
             </div>
         </div>
     </main>

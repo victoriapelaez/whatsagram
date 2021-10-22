@@ -13,8 +13,7 @@ var letras = document.querySelectorAll(".letra");
 
 letras.forEach((letra) => {
   letra.onclick = function () {
-     document.getElementById("recuadro-escribir").value +=
-      letra.value;
+    document.getElementById("recuadro-escribir").value += letra.value;
 
     //funcion principal de todo lo q hara al enviar
     document.getElementById("enviar").onclick = function () {
@@ -42,7 +41,9 @@ letras.forEach((letra) => {
       //creacion nodo de texto con hora
       var nodo = document.createElement("div");
       nodo.classList.add("message");
-      var nodotexto = document.createTextNode(document.getElementById("recuadro-escribir").value);
+      var nodotexto = document.createTextNode(
+        document.getElementById("recuadro-escribir").value
+      );
       var nodohorario = document.createTextNode(
         " " +
           hour.getHours() +
@@ -88,22 +89,21 @@ letras.forEach((letra) => {
 
   //funcion saltos de linea
   document.getElementById("↵").onclick = function () {
-    let recuadroInput= document.getElementById("recuadro-escribir").value
-    let salto = recuadroInput +"\n"
-    console.log(salto);
-    document.getElementById("recuadro-escribir").value = salto
+    let recuadroInput = document.getElementById("recuadro-escribir").value;
+    document.getElementById("recuadro-escribir").value = recuadroInput + "\n";
   };
 
   //funcion mayusculas
   document.getElementById("Mayus").onclick = function () {
-    /* let mayus = false;
-    if(mayus==true){
-      letras.forEach(letra) => {
-      letras.style.textTransform()= "capitalize"
-    }} */
-    /* let contenido= document.getElementById("recuadro-escribir").value
+    letras.className = "clase-mayus";
+    /*let mayus = false;
+      if(mayus==true){
+       letras.forEach(letra) => {
+      letras.style.textTransform()= "capitalize";
+    } }
+     let contenido= document.getElementById("recuadro-escribir").value
       let newContenido = contenido.toUpperCase()
       console.log(newContenido)
-      document.getElementById("recuadro-escribir").value= newContenido  */ 
+      document.getElementById("recuadro-escribir").value= newContenido  */
   };
 });

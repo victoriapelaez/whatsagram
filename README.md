@@ -12,13 +12,13 @@
 - [x] Js para escribir frase
 - [x] Espacio
 - [x] Función C -> Borrar texto, CE -> Borrar última palabra
-- [ ] Funciones borrar primer y última letra
+- [x] Funciones borrar primer y última letra
 - [ ] Función Majúsculas
 - [x] Función espacio
 - [ ] Función salto de línea
 - [ ] CSS *flexbox*(keyboard) y *grid*(layout), Responsive-centrado
-- [ ] CSS Colores
-- [ ] CSS Botones, forma y tamaño, efectos
+- [x] CSS Colores
+- [x] CSS Botones, forma y tamaño, efectos
 - [x] Importar letra
 - [x] Iconos
 - [ ] Gif

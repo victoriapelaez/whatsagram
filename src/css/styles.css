@@ -3,12 +3,35 @@
 main {
   font-family: "Roboto", sans-serif;
   display: grid;
-  grid-template-columns: 2fr 0.5fr 2fr;
-  grid-template-rows: 4fr 0.5fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   height: 100vh;
   font-weight: bold;
 }
-
+.header-area {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  background-color: #173841;
+  display: inline-flex;
+}
+img {
+  width: 8vh;
+  border-radius: 150px;
+  margin: 1em;
+}
+h2 {
+  color: white;
+  margin: auto;
+  font-size: 2em;
+}
+i {
+  color: white;
+  margin: auto;
+  font-size: 1.5em;
+}
 .messaging-area {
   background-size: cover;
   background-image: url(../images/fondo_oscuro.jpg);
@@ -16,100 +39,107 @@ main {
   background-repeat: no-repeat;
   grid-column-start: 2;
   grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  height: 80vh;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  height: 142vh;
   border: rgb(28, 0, 59) 2px solid;
   display: flex;
   justify-content: flex-end;
-  padding: 20px;
   flex-direction: column;
 }
 .text-area {
   grid-column-start: 2;
   grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
   display: flex;
-  background-color: #2b2f30;
+  /* background-color: #2b2f30; */
   align-items: center;
 }
 .keyboard-area {
   grid-column-start: 2;
   grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
   display: flex;
   flex-direction: column;
   border: rgb(28, 0, 59) 2px solid;
-  background-color: #2b2f30;
-  justify-content: space-around;
+  background-color: #1d1e1f;
   align-items: center;
+  row-gap: 0.3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 input.letra {
   font-family: "Roboto", sans-serif;
-  width: 3em;
-  height: 3em;
+  width: 4em;
+  height: 4em;
   font-weight: bold;
-  /* font-size: 13px; */
   border-radius: 5px;
-  background-color: #838588;
+  background-color: #3d3f42;
   color: white;
 }
 .recuadro-escribir {
   width: 30rem;
-  height: 2rem;
-  border-radius: 20px;
-  background-color: white;
+  height: 2.5rem;
+  border-radius: 40px;
+  background-color: #173841;
+  border-color: #173841;
   resize: none;
-  text-align:justify;
-  font-size: 1.3em;
-}
-/* .letra {
-  background-color: #838588;
-  color: white;
-} */
-.emoji {
-  border-radius: 20px;
-  margin: 13px;
-  font-size: 1.4em;
-  background-color: #2b2f30;
-  inline-size: auto;
-  height: 2em;
-}
-.tecla-funcion {
-  width: 6em;
-  height: 2rem;
-}
-#space {
-  width: 20em;
-  height: 2rem;
-  background-color: #838588;
-}
-.enviar {
-  margin: 8px;
-  background-color: #2522ca;
-  font-size: 1.5rem;
-  border-radius: 20px;
+  text-align: justify;
+  font-size: 2em;
+  padding: 0.5rem;
   color: white;
 }
 
-.fa {
+.emoji {
+  border-radius: 2em;
+  margin: 0.3em;
+  font-size: 2em;
+  background: inherit;
+  inline-size: auto;
+  height: 2em;
+  border-color: transparent;
+}
+.tecla-funcion {
+  width: 6em;
+  height: 3.5rem;
+  border-radius: 5px;
+  background-color: #3d3f42;
+  color: white;
+}
+#space {
+  width: 25em;
+  height: 3.5rem;
+  background-color: #3d3f42;
+}
+.enviar {
+  margin: 0.3em;
+  background-color: #2522ca;
+  border-color: #2522ca;
+  font-size: 2.7em;
+  border-radius: 1em;
+  color: white;
+  margin-left: 0.5em;
+}
+
+#fa {
   background-color: #127262;
-  margin: 8px;
-  font-size: 1.2em;
-  border-radius: 20px;
+  margin: 0.3em;
+  font-size: 2em;
+  border-radius: 2em;
   color: white;
   width: 2em;
   height: 2em;
+  border-color: #127262;
 }
 #recuadro {
   align-self: flex-end;
 }
 
 #recuadro-fecha {
-  background-color: rgb(14, 66, 58);
+  background-color: #127262;
   border-radius: 8px;
   /*inline-size: fit-content;*/
   align-self: center;
@@ -118,11 +148,25 @@ input.letra {
 }
 .message {
   border-radius: 10px;
-  background-color: rgb(14, 66, 58);
-  padding: 10px;
+  background-color: #127262;
+  padding: 1em;
   align-self: flex-end;
-  margin: 5px;
+  margin: 1rem;
   text-align: right;
   width: fit-content;
   color: white;
+}
+input.clase-mayus {
+  font-family: "Roboto", sans-serif;
+  width: 3em;
+  height: 3em;
+  font-weight: bold;
+  /* font-size: 13px; */
+  border-radius: 5px;
+  background-color: #838588;
+  color: white;
+  text-transform: capitalize;
+}
+.tecla-funcion:hover, .letra:hover{
+  background-color: rgb(37, 37, 92);
 }
