@@ -49,14 +49,16 @@ letras.forEach((letra) => {
       ).innerHTML += `<div class="message">
                           <div class="texto-message">${saltoLinea + " "}
                           </div> 
-                          <div id="recuadro-hora">${
-                          hour.getHours() +
-                          ":" +
-                          (hour.getMinutes() < 10
-                          ? `0${hour.getMinutes()}`
-                          : hour.getMinutes())
+                          <div class="recuadro-hora">${
+                            hour.getHours() +
+                            ":" +
+                            (hour.getMinutes() < 10
+                              ? `0${hour.getMinutes()}`
+                              : hour.getMinutes())
                           }
+                          &#x2713;
                           </div>
+                          
                       </div>
                 `;
       document.getElementById("recuadro-escribir").value = "";
@@ -97,16 +99,14 @@ letras.forEach((letra) => {
 
   //funcion mayusculas
   document.getElementById("Mayus").onclick = function () {
-    letras.className = "clase-mayus";
-    /*let mayus = false;
-      if(mayus==true){
-       letras.forEach(letra) => {
-      letras.style.textTransform()= "capitalize";
-    } }
-     let contenido= document.getElementById("recuadro-escribir").value
-      let newContenido = contenido.toUpperCase()
-      console.log(newContenido)
-      document.getElementById("recuadro-escribir").value= newContenido  */
+    letras.forEach((letra) => {
+      letra.classList.toggle("clase-mayus");
+      if (letra.classList.contains("clase-mayus")) {
+        letra.value = letra.value.toUpperCase();
+      } else {
+        letra.value = letra.value.toLowerCase();
+      }
+    });
   };
 
   document.getElementById("emoji").onclick = function () {
