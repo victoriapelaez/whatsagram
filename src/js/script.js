@@ -97,7 +97,7 @@ document.getElementById("↵").onclick = function () {
 };
 
 //funcion mayusculas
- document.getElementById("Mayus").onclick = function () {
+document.getElementById("Mayus").onclick = function () {
   letras.forEach((letra) => {
     letra.classList.toggle("clase-mayus");
     if (letra.classList.contains("clase-mayus")) {
@@ -106,8 +106,7 @@ document.getElementById("↵").onclick = function () {
       letra.value = letra.value.toLowerCase();
     }
   });
-}; 
-
+};
 
 /* document.getElementById("emoji").onclick = function () {
   console.log("hola");
@@ -126,3 +125,10 @@ document.getElementById("↵").onclick = function () {
   console.log(emojis);
   document.getElementById("desplegable").style.display = "flex";
 }; */
+
+window.addEventListener("load", function () {
+  document.getElementById("boton-micro").addEventListener("click", sonarAudio);
+});
+function sonarAudio() {
+  var audio = document.getElementById("audio-micro").play();
+}

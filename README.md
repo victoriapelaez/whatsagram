@@ -13,9 +13,10 @@
 - [x] Espacio
 - [x] Función C -> Borrar texto, CE -> Borrar última palabra
 - [x] Funciones borrar primer y última letra
-- [ ] Función Majúsculas
+- [x] Función Majúsculas
+- [ ] Hacer Mayuscula con un click y dos clicks
 - [x] Función espacio
-- [ ] Función salto de línea
+- [x] Función salto de línea
 - [ ] CSS *flexbox*(keyboard) y *grid*(layout), Responsive-centrado
 - [x] CSS Colores
 - [x] CSS Botones, forma y tamaño, efectos
@@ -23,7 +24,7 @@
 - [x] Iconos
 - [ ] Gif
 - [x] Añadir fecha del dia y hora al enviar mensaje
-
+- [x] Añadir audio boton micro
 
 ##### Herramientas usadas externas
 [https://markdown.es/sintaxis-markdown/]

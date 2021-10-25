@@ -125,6 +125,9 @@ main {
   height: 2em;
   border: 0;
 }
+.audio {
+  display: none;
+}
 /* Estilo para items del footer-keyboard */
 footer {
   grid-area: "key";
@@ -173,7 +176,7 @@ footer {
   background-color: #3d3f42;
   color: white;
 }
-.tecla-funcion{
+.tecla-funcion {
   flex-basis: 10%;
 
   border-radius: 5px;
@@ -189,17 +192,9 @@ footer {
   background-color: rgb(37, 37, 92);
 }
 
-/* .clase-mayus {
-  text-transform: capitalize;
-} */
-
-/* @media (min-width: 400px) {
-      body{
-          margin: 0;
-          width: 60%;
-          margin-left: 10%;
-          margin-right: 10%;
-      }
-     
-      
-  }  */
+@media (min-width: 400px) {
+  body {
+    display: grid;
+    justify-content: center;
+  }
+}
