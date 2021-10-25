@@ -130,5 +130,5 @@ window.addEventListener("load", function () {
   document.getElementById("boton-micro").addEventListener("click", sonarAudio);
 });
 function sonarAudio() {
-  var audio = document.getElementById("audio-micro").play();
+  document.getElementById("audio-micro").play();
 }
