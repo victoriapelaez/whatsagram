@@ -44,20 +44,19 @@ document.getElementById("enviar").onclick = function () {
   document.querySelector(
     ".container-recuadros"
   ).innerHTML += `<div class="message">
-                          <div class="texto-message">${saltoLinea + " "}
-                          </div> 
-                          <div class="recuadro-hora">${
-                            hour.getHours() +
-                            ":" +
-                            (hour.getMinutes() < 10
-                              ? `0${hour.getMinutes()}`
-                              : hour.getMinutes())
-                          }
-                          &#x2713;
-                          </div>
-                          
-                      </div>
-                `;
+                    <div class="texto-message">${saltoLinea + " "}
+                    </div> 
+                    <div class="recuadro-hora">${
+                    hour.getHours() +
+                    ":" +
+                    (hour.getMinutes() < 10
+                    ? `0${hour.getMinutes()}`
+                    : hour.getMinutes())
+                    }
+                    &#x2713;
+                    </div>
+                  </div>
+                  `;
   document.getElementById("recuadro-escribir").value = "";
 };
 

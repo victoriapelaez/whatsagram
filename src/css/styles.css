@@ -125,9 +125,7 @@ main {
   height: 2em;
   border: 0;
 }
-.audio {
-  display: none;
-}
+
 /* Estilo para items del footer-keyboard */
 footer {
   grid-area: "key";
@@ -168,7 +166,7 @@ footer {
 }
 
 .letra {
-  flex-basis: 7%;
+  flex-basis: 10%;
   font-family: "Roboto", sans-serif;
 
   font-weight: bold;
@@ -184,7 +182,7 @@ footer {
   color: white;
 }
 #space {
-  flex-basis: 70%;
+  flex-basis: 80%;
   background-color: #3d3f42;
 }
 .tecla-funcion:hover,
