@@ -93,6 +93,7 @@ main {
   display: none;
 }
 .recuadro-escribir {
+  font-family: "Roboto", sans-serif;
   background-color: #173841;
   border-color: #173841;
   color: white;
@@ -101,7 +102,7 @@ main {
   border-radius: 2em;
   resize: none;
   text-align: justify;
-  font-size: 1em;
+  font-size: 0.8em;
   padding: 0.6em;
 }
 
@@ -190,7 +191,7 @@ footer {
   background-color: rgb(37, 37, 92);
 }
 
-@media (min-width: 400px) {
+@media  only screen and (min-width: 400px) {
   body {
     display: grid;
     justify-content: center;
