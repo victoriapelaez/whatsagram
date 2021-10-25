@@ -1,44 +1,62 @@
 body {
+  margin: auto 0;
+}
+
+.principal-container {
   display: grid;
-  grid-template-areas:
-    "head "
-    "text-area"
-    "key";
+  grid-template-columns: 0px 1fr 0px;
+  grid-template-rows: repeat(3, 1fr);
   font-family: "Roboto", sans-serif;
-  margin: 0;
-  width: 100vw;
+  margin: auto 0;
+  height: 100vh;
 }
 /* Estilo para items del header-cabecera */
 header {
-  grid-area: "head";
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
   height: 10vh;
   display: flex;
-  display: inline-flex;
   background-color: #173841;
   justify-content: space-around;
 }
 img {
-  width: 2.5rem;
-  /* height: 2.5rem; */
+  width: 3rem;
   border-radius: 2em;
+  align-self: center;
+}
+.user {
+  display: flex;
+  flex-direction: column;
   align-self: center;
 }
 h2 {
   color: white;
-  align-self: center;
+
   font-size: 1rem;
+  margin: 0;
+}
+h4 {
+  margin: 0;
+  color: white;
+  font-size: 0.7rem;
 }
 i {
   color: white;
   align-self: center;
   font-size: 1em;
 }
+.fa {
+  transform: scaleX(-1);
+}
 /* Estilo para items del main-messaging */
 main {
-  grid-area: "text-area";
-  display: flex;
-  height: 65vh;
-  overflow: auto;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  height: 67vh;
   background-size: cover;
   background-image: url(../images/fondo_oscuro.jpg);
   background-position: center center;
@@ -52,10 +70,13 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .container-recuadros {
-  display: contents;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 }
 .recuadro-fecha {
   background-color: #3d3f42;
@@ -88,10 +109,29 @@ main {
   border-color: transparent;
   background: inherit;
   font-size: 1.7em;
+  /* filter: grayscale(100%) */
 }
-.desplegable {
+.emoji-container {
   display: none;
+  position: absolute;
+  z-index: 1;
 }
+.emoji-list {
+  display: flex;
+  flex-wrap: 1;
+  overflow: auto;
+}
+.emojis:hover {
+  transform: scale(2);
+}
+
+/* .emoji-teclado {
+  display: none;
+  content: "&#x2328";
+} */
+/* .desplegable {
+  display: none;
+} */
 .recuadro-escribir {
   font-family: "Roboto", sans-serif;
   background-color: #173841;
@@ -129,9 +169,11 @@ main {
 
 /* Estilo para items del footer-keyboard */
 footer {
-  grid-area: "key";
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
   display: flex;
-  flex-wrap: 1;
   flex-direction: column;
   align-items: center;
   row-gap: 0.2em;
@@ -140,60 +182,63 @@ footer {
   background-color: #1d1e1f;
   height: 20vh;
 }
-.area-1 {
-  width: 85vw;
-  justify-content: space-between;
-  display: flex;
-}
-.area-2 {
-  width: 75vw;
-  justify-content: space-between;
-  display: flex;
-}
-.area-3 {
-  width: 85vw;
-  justify-content: space-between;
-  display: flex;
-}
-.area-4 {
-  width: 69vw;
-  justify-content: space-between;
-  display: flex;
-}
+.area-1,
+.area-2,
+.area-3,
+.area-4,
 .area-5 {
-  width: 60vw;
-  justify-content: space-between;
   display: flex;
 }
 
 .letra {
-  flex-basis: 10%;
   font-family: "Roboto", sans-serif;
-
   font-weight: bold;
   border-radius: 5px;
   background-color: #3d3f42;
   color: white;
 }
 .tecla-funcion {
-  flex-basis: 10%;
-
   border-radius: 5px;
   background-color: #3d3f42;
   color: white;
 }
 #space {
-  flex-basis: 80%;
+  width: 50vw;
   background-color: #3d3f42;
 }
 .tecla-funcion:hover,
 .letra:hover {
   background-color: rgb(37, 37, 92);
+  transform: scale(1.2);
 }
 
-@media  only screen and (min-width: 400px) {
-  body {
+@media (min-width: 400px) {
+  .principal-container {
     display: grid;
-    justify-content: center;
+    grid-template-columns: 30% 40% 30%;
+  }
+  .header-area {
+    height: 10vh;
+    justify-content: space-evenly;
+  }
+  main {
+    height: 62vh;
+  }
+  .keyboard-area {
+    height: 30vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  #space {
+    width: 20vw;
+  }
+  .letra {
+    width: 3vw;
+  }
+  .tecla-funcion {
+    width: 5vw;
+  }
+  i{
+    font-size: 1.5em;
   }
 }

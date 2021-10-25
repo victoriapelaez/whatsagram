@@ -16,28 +16,41 @@
 </head>
 
 <body>
-    
+    <div class="principal-container">
         <header class="header-area" id="" header-area>
             <img src="./images/recorte selfie.png">
-            <h2>Antoni Amengual🎨</h2>
+            <div class="user">
+                <h2>Antoni Amengual🎨</h2>
+                <h4>en línea</h4>
+            </div>
+
             <i class="fas fa-video"></i>
             <i class="fa fa-phone"></i>
             <i class="fas fa-ellipsis-v"></i>
         </header>
         <main class="messaging-area" id="messaging-area">
             <div class="container-recuadros">
-                 <div id="recuadro-fecha" class="recuadro-fecha" ></div>
-               
+                <div id="recuadro-fecha" class="recuadro-fecha"></div>
+
             </div>
 
             <!--Recuadro conversacion donde llegan los mensajes-->
             <div class="text-area">
-                <input type="button" name="Emoticonos" value="&#128512" class="boton-emoji" id="emoji">
-                <div class="desplegable" id="desplegable"></div>
+                <input type="button" name="Emoticonos" value="&#128512" class="boton-emoji" id="emoji"></input>
+
+                <!-- <div class="emoji-container" id="emoji-container">
+                <div class="emoji-list">
+                    <div class="emojis">😀</div>
+                    <div class="emojis">😍</div>
+                    <div class="emojis">😂</div>
+                </div>
+            </div> -->
+
+
                 <!--Boton con emoticonos-->
                 <textarea class="recuadro-escribir" id="recuadro-escribir" placeholder="Mensaje"></textarea>
                 <!--Recuadro donde se escriben las letras al pulsar-->
-                <input type="button" name="Enviar" value="&#x27A4" id="enviar" class="boton-enviar">
+                <input type="button" name="Enviar" value="&#x27A4" id="enviar" class="boton-enviar"></input>
                 <!--Boton que envia a la messaging area-->
                 <input type="button" name="micro" value="&#xf130" class="fa" id="boton-micro"></input>
 
@@ -105,8 +118,9 @@
                 <!--Tecla borra ultima palabra-->
             </div>
         </footer>
-    
+    </div>
 </body>
 <script src="js/script.js"></script>
 <audio src="audio/feliz_halloween.mp3" id="audio-micro" auto controls="none" style="display: none;"></audio>
+
 </html>

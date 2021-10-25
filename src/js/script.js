@@ -47,11 +47,11 @@ document.getElementById("enviar").onclick = function () {
                     <div class="texto-message">${saltoLinea + " "}
                     </div> 
                     <div class="recuadro-hora">${
-                    hour.getHours() +
-                    ":" +
-                    (hour.getMinutes() < 10
-                    ? `0${hour.getMinutes()}`
-                    : hour.getMinutes())
+                      hour.getHours() +
+                      ":" +
+                      (hour.getMinutes() < 10
+                        ? `0${hour.getMinutes()}`
+                        : hour.getMinutes())
                     }
                     &#x2713;
                     </div>
@@ -106,24 +106,14 @@ document.getElementById("Mayus").onclick = function () {
     }
   });
 };
-
-/* document.getElementById("emoji").onclick = function () {
-  console.log("hola");
-  let emojis = [
-    "&#128512",
-    "&#128514",
-    "&#128517",
-    "&#128519",
-    "&#128520",
-    "&#128521",
-    "&#128525",
-    "&#128526",
-    "&#128545",
-    "&#128564",
-  ];
-  console.log(emojis);
-  document.getElementById("desplegable").style.display = "flex";
-}; */
+//escucha una letra para q se ponga en minuscula
+document.getElementById("emoji").addEventListener("click", function () {
+  var icono = document.getElementById("emoji");
+  
+  icono.classList.toggle("boton-emoji");
+  icono.classList.toggle("emoji-teclado");
+  
+});
 
 window.addEventListener("load", function () {
   document.getElementById("boton-micro").addEventListener("click", sonarAudio);
