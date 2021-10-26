@@ -106,12 +106,27 @@ document.getElementById("Mayus").onclick = function () {
     }
   });
 };
+/* document.getElementById("Mayus").onclick = function () {
+  letras.forEach((letra) => {
+    letra.classList.toggle("clase-mayus");
+    letra.value = letra.value.toUpperCase();
+
+    letra.onclick = function () {
+      letras.forEach((letra) => {
+        letra.value = letra.value.toLowerCase();
+        
+      });
+    } 
+  });
+}; */
+
 //escucha una letra para q se ponga en minuscula
 document.getElementById("emoji").addEventListener("click", function () {
   var icono = document.getElementById("emoji");
-  
-  icono.classList.toggle("boton-emoji");
-  icono.classList.toggle("emoji-teclado");
+   
+    icono.setAttribute("value", "\u2328");
+    document.getElementById("area-emoji").style.display = "inline";
+    document.getElementById("area-letras").style.display = "none";
   
 });
 

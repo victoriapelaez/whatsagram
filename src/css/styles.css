@@ -30,6 +30,7 @@ img {
   display: flex;
   flex-direction: column;
   align-self: center;
+  flex-basis: 40%;
 }
 h2 {
   color: white;
@@ -108,7 +109,9 @@ main {
 .boton-emoji {
   border-color: transparent;
   background: inherit;
-  font-size: 1.7em;
+  font-size: 2.7em;
+  color: rgb(204, 204, 204);
+  padding-bottom: 0.2em;
   /* filter: grayscale(100%) */
 }
 .emoji-container {
@@ -124,14 +127,6 @@ main {
 .emojis:hover {
   transform: scale(2);
 }
-
-/* .emoji-teclado {
-  display: none;
-  content: "&#x2328";
-} */
-/* .desplegable {
-  display: none;
-} */
 .recuadro-escribir {
   font-family: "Roboto", sans-serif;
   background-color: #173841;
@@ -144,6 +139,7 @@ main {
   text-align: justify;
   font-size: 0.8em;
   padding: 0.6em;
+  overflow: auto;
 }
 
 .boton-enviar {
@@ -166,7 +162,10 @@ main {
   height: 2em;
   border: 0;
 }
+.area-emoji{
+  display: none;
 
+}
 /* Estilo para items del footer-keyboard */
 footer {
   grid-column-start: 2;
@@ -240,5 +239,8 @@ footer {
   }
   i{
     font-size: 1.5em;
+  }
+  .recuadro-escribir{
+    flex-basis: 70%;
   }
 }
