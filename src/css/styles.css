@@ -109,7 +109,7 @@ main {
 .boton-emoji {
   border-color: transparent;
   background: inherit;
-  font-size: 2.7em;
+  font-size: 2em;
   color: rgb(204, 204, 204);
   padding-bottom: 0.2em;
   /* filter: grayscale(100%) */
@@ -232,7 +232,7 @@ footer {
     width: 20vw;
   }
   .letra {
-    width: 3vw;
+    width: 2.5vw;
   }
   .tecla-funcion {
     width: 5vw;

@@ -121,18 +121,28 @@ document.getElementById("Mayus").onclick = function () {
 }; */
 
 //escucha una letra para q se ponga en minuscula
-document.getElementById("emoji").addEventListener("click", function () {
+document.getElementById("emoji").addEventListener("click", function emoji() {
   var icono = document.getElementById("emoji");
-   
+  icono.classList.toggle("icono-cara")
+  if (icono.classList.contains("icono-cara")) {
     icono.setAttribute("value", "\u2328");
     document.getElementById("area-emoji").style.display = "inline";
     document.getElementById("area-letras").style.display = "none";
-  
+  } else {
+    icono.setAttribute("value", "😀");
+  document.getElementById("area-emoji").style.display = "none";
+  document.getElementById("area-letras").style.display = "inline";
+  }  
 });
+
+  
+
+
 
 window.addEventListener("load", function () {
   document.getElementById("boton-micro").addEventListener("click", sonarAudio);
 });
 function sonarAudio() {
   document.getElementById("audio-micro").play();
+  
 }
