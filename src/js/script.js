@@ -5,11 +5,27 @@ var date = new Date();
  *recorro mi colección de letras anterior, sacando cada letra de la coleccion
  *clickar en cada una de las letras activará la funcion
  *añado en el html, en el recuadro de escritura y concateno cada letra*/
-
+let controlInfiniteMayus = false;
 var letras = document.querySelectorAll(".letra");
+
 letras.forEach((letra) => {
   letra.onclick = function () {
     document.getElementById("recuadro-escribir").value += letra.value;
+
+    if (controlInfiniteMayus) {
+      return;
+    }
+    if (letra.classList.contains("clase-mayus")) {
+      letras.forEach((letra) => {
+        console.log("uii");
+        letra.classList.toggle("clase-mayus");
+        letra.value = letra.value.toLowerCase();
+      });
+      return;
+    }
+
+    console.log("inicio");
+    console.log("hola");
   };
 });
 
@@ -96,53 +112,53 @@ document.getElementById("↵").onclick = function () {
 };
 
 //funcion mayusculas
-document.getElementById("Mayus").onclick = function () {
+document.getElementById("Mayus").ondblclick = function () {
+  console.log("entro en doble");
+  controlInfiniteMayus=true;
   letras.forEach((letra) => {
-    letra.classList.toggle("clase-mayus");
-    if (letra.classList.contains("clase-mayus")) {
+    letra.value = letra.value.toUpperCase();
+    /*  if (letra.classList.contains("clase-mayus")) {
       letra.value = letra.value.toUpperCase();
     } else {
       letra.value = letra.value.toLowerCase();
-    }
+    } */
   });
 };
-/* document.getElementById("Mayus").onclick = function () {
-  letras.forEach((letra) => {
-    letra.classList.toggle("clase-mayus");
-    letra.value = letra.value.toUpperCase();
 
-    letra.onclick = function () {
-      letras.forEach((letra) => {
-        letra.value = letra.value.toLowerCase();
-        
-      });
-    } 
-  });
-}; */
+document.getElementById("Mayus").onclick = function () {
+  if (controlInfiniteMayus) {
+    letras.forEach((letra) => {
+      letra.value = letra.value.toLowerCase();
+    });
+    controlInfiniteMayus=false;
+  }else{
+    letras.forEach((letra) => {
+      letra.classList.toggle("clase-mayus");
+      letra.value = letra.value.toUpperCase();
+    });
+  }
+
+};
 
 //escucha una letra para q se ponga en minuscula
+
 document.getElementById("emoji").addEventListener("click", function emoji() {
   var icono = document.getElementById("emoji");
-  icono.classList.toggle("icono-cara")
+  icono.classList.toggle("icono-cara");
   if (icono.classList.contains("icono-cara")) {
     icono.setAttribute("value", "\u2328");
     document.getElementById("area-emoji").style.display = "inline";
     document.getElementById("area-letras").style.display = "none";
   } else {
     icono.setAttribute("value", "😀");
-  document.getElementById("area-emoji").style.display = "none";
-  document.getElementById("area-letras").style.display = "inline";
-  }  
+    document.getElementById("area-emoji").style.display = "none";
+    document.getElementById("area-letras").style.display = "inline";
+  }
 });
-
-  
-
-
 
 window.addEventListener("load", function () {
   document.getElementById("boton-micro").addEventListener("click", sonarAudio);
 });
 function sonarAudio() {
   document.getElementById("audio-micro").play();
-  
 }
