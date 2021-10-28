@@ -112,7 +112,7 @@ main {
   font-size: 2em;
   color: rgb(204, 204, 204);
   padding-bottom: 0.2em;
-  /* filter: grayscale(100%) */
+  
 }
 .emoji-container {
   display: none;
@@ -140,6 +140,7 @@ main {
   font-size: 0.8em;
   padding: 0.6em;
   overflow: auto;
+  margin-right: 1em;
 }
 
 .boton-enviar {
@@ -148,7 +149,7 @@ main {
   font-size: 1em;
   border-radius: 1em;
   color: white;
-
+margin-right: 0.5em;
   width: 2em;
   height: 2em;
 }
@@ -161,6 +162,13 @@ main {
   width: 2em;
   height: 2em;
   border: 0;
+}
+
+audio {
+  /* filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%); */
+  width: 200px;
+  height: 25px;
+ 
 }
 .area-emoji{
   display: none;
@@ -211,6 +219,10 @@ footer {
   transform: scale(1.2);
 }
 
+.clase-mayus{
+  text-transform: uppercase;
+}
+
 @media (min-width: 400px) {
   .principal-container {
     display: grid;
@@ -240,7 +252,5 @@ footer {
   i{
     font-size: 1.5em;
   }
-  .recuadro-escribir{
-    flex-basis: 70%;
-  }
+  
 }

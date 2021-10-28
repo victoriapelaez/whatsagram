@@ -6,18 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whatsagram</title>
+    <!---->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!---->
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
+    <!---->
     <div class="principal-container">
+        <!---->
         <header class="header-area" id="" header-area>
+            <!---->
             <img src="./images/recorte selfie.png">
             <div class="user">
                 <h2>Antoni Amengual🎨</h2>
@@ -27,12 +32,11 @@
             <i class="fa fa-phone"></i>
             <i class="fas fa-ellipsis-v"></i>
         </header>
+        <!---->
         <main class="messaging-area" id="messaging-area">
             <div class="container-recuadros">
                 <div id="recuadro-fecha" class="recuadro-fecha"></div>
-
             </div>
-
             <!--Recuadro conversacion donde llegan los mensajes-->
             <div class="text-area">
                 <input type="button" name="Emoticonos" value="😀" class="boton-emoji" id="emoji"></input>
@@ -44,6 +48,7 @@
                 <input type="button" name="micro" value="&#xf130" class="fa" id="boton-micro"></input>
             </div>
         </main>
+
         <footer class="keyboard-area">
             <div class="area-emoji" id="area-emoji">
                 <input type="button" value="&#128514" class="letra">
@@ -54,8 +59,8 @@
                 <input type="button" value="&#128561" class="letra">
                 <input type="button" value="&#128530" class="letra">
                 <input type="button" value="&#128151" class="letra">
-                <input type="button" value="&#129306" class="letra">
-                <input type="button" value="&#11013" id="←" class="tecla-funcion">
+                <input type="button" value="&#128584" class="letra">
+
             </div>
             <div class="area-1" id="area-letras">
                 <input type="button" value="1" class="letra">
@@ -69,9 +74,11 @@
                 <input type="button" value="9" class="letra">
                 <input type="button" value="0" class="letra">
                 <input type="button" value="?" class="letra">
+
             </div>
 
             <div class="area-2">
+                <input type="button" value="&#10145" id="→" class="tecla-funcion">
                 <input type="button" value="q" class="letra">
                 <input type="button" value="w" class="letra">
                 <input type="button" value="e" class="letra">
@@ -82,7 +89,8 @@
                 <input type="button" value="i" class="letra">
                 <input type="button" value="o" class="letra">
                 <input type="button" value="p" class="letra">
-                <input type="button" value="&#10145" id="→" class="tecla-funcion">
+                <input type="button" value="&#11013" id="←" class="tecla-funcion">
+
             </div>
             <div class="area-3">
                 <input type="button" value="Mayus" id="Mayus" class="tecla-funcion">
@@ -96,7 +104,7 @@
                 <input type="button" value="k" class="letra">
                 <input type="button" value="l" class="letra">
                 <input type="button" value="ñ" class="letra">
-                <input type="button" value="&#11013" id="←" class="tecla-funcion">
+
             </div>
             <div class="area-4">
                 <input type="button" value="↵" id="↵" class="tecla-funcion">
@@ -115,7 +123,7 @@
                 <!--Tecla borra todo el texto-->
                 <input type="button" value=" " id="space" class="letra">
                 <!--Tecla espacio-->
-                <input type="button" value="?" class="letra">
+
                 <input type="button" value="CE" id="CE" class="tecla-funcion">
                 <!--Tecla borra ultima palabra-->
             </div>
@@ -123,6 +131,5 @@
     </div>
 </body>
 <script src="js/script.js"></script>
-<audio src="audio/feliz_halloween.mp3" id="audio-micro" auto controls="none" style="display: none;"></audio>
 
 </html>

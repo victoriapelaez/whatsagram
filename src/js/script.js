@@ -1,31 +1,26 @@
 var hour = new Date();
 var date = new Date();
+let controlInfiniteMayus = false;
+var letras = document.querySelectorAll(".letra");
 
 /*selecciono todas las letras que tienen la clase letra
  *recorro mi colección de letras anterior, sacando cada letra de la coleccion
  *clickar en cada una de las letras activará la funcion
  *añado en el html, en el recuadro de escritura y concateno cada letra*/
-let controlInfiniteMayus = false;
-var letras = document.querySelectorAll(".letra");
 
 letras.forEach((letra) => {
   letra.onclick = function () {
     document.getElementById("recuadro-escribir").value += letra.value;
-
     if (controlInfiniteMayus) {
       return;
     }
     if (letra.classList.contains("clase-mayus")) {
       letras.forEach((letra) => {
-        console.log("uii");
         letra.classList.toggle("clase-mayus");
         letra.value = letra.value.toLowerCase();
       });
       return;
     }
-
-    console.log("inicio");
-    console.log("hola");
   };
 });
 
@@ -113,15 +108,9 @@ document.getElementById("↵").onclick = function () {
 
 //funcion mayusculas
 document.getElementById("Mayus").ondblclick = function () {
-  console.log("entro en doble");
-  controlInfiniteMayus=true;
+  controlInfiniteMayus = true;
   letras.forEach((letra) => {
     letra.value = letra.value.toUpperCase();
-    /*  if (letra.classList.contains("clase-mayus")) {
-      letra.value = letra.value.toUpperCase();
-    } else {
-      letra.value = letra.value.toLowerCase();
-    } */
   });
 };
 
@@ -130,14 +119,13 @@ document.getElementById("Mayus").onclick = function () {
     letras.forEach((letra) => {
       letra.value = letra.value.toLowerCase();
     });
-    controlInfiniteMayus=false;
-  }else{
+    controlInfiniteMayus = false;
+  } else {
     letras.forEach((letra) => {
       letra.classList.toggle("clase-mayus");
       letra.value = letra.value.toUpperCase();
     });
   }
-
 };
 
 //escucha una letra para q se ponga en minuscula
@@ -160,5 +148,20 @@ window.addEventListener("load", function () {
   document.getElementById("boton-micro").addEventListener("click", sonarAudio);
 });
 function sonarAudio() {
+  document.querySelector(".container-recuadros").innerHTML += `<div class="message">
+  <div class="texto-message">
+  <audio src="audio/feliz_halloween.mp3" id="audio-micro" controls></audio>
+  </div> 
+  <div class="recuadro-hora">${
+    hour.getHours() +
+    ":" +
+    (hour.getMinutes() < 10
+      ? `0${hour.getMinutes()}`
+      : hour.getMinutes())
+  }
+  &#x2713;
+  </div>
+</div>
+`;
   document.getElementById("audio-micro").play();
 }
