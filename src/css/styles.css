@@ -141,20 +141,24 @@ main {
 .container-recuadros::-webkit-scrollbar {
   background-color: #3d3f42;
   border-radius: 10px;
+  width: 0.5em;
 }
 .container-recuadros::-webkit-scrollbar-thumb {
   background-color: #127262;
   border-radius: 10px;
+  width: 0.5em;
 }
 
 
 .recuadro-escribir::-webkit-scrollbar {
   background-color: #3d3f42;
   border-radius: 5px;
+  width: 0.5em;
 }
 .recuadro-escribir::-webkit-scrollbar-thumb {
   background-color: #127262;
   border-radius: 5px;
+  width: 0.5em;
 }
 
 .boton-enviar {
@@ -208,6 +212,8 @@ footer {
   background: transparent;
   border: none;
   font-size: 1rem;
+  margin: 0.3rem;
+  padding: 0;
 }
 .letra {
   font-family: "Roboto", sans-serif;
@@ -215,17 +221,21 @@ footer {
   border-radius: 5px;
   background-color: transparent;
   color: white;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .tecla-funcion {
   border-radius: 5px;
   background-color: transparent;
   color: white;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 #space {
   margin-left: 1.5em;
   margin-right: 1.5em;
-  width: 15vw; 
+  width: 35vw; 
   background-color: transparent;
 }
 .tecla-funcion:hover,
@@ -255,16 +265,16 @@ footer {
     row-gap: 1em;
   }
   #space {
-    /* width: 20vw; */
+    width: 17rem;
     background-color: transparent;
   }
   .letra {
-    width: 2.5vw;
+    width: 2.3rem;
     transform: scaleY(1.4);
     background-color: transparent;
   }
   .tecla-funcion {
-    width: 5vw;
+    width: 5rem;
     transform: scaleY(1.4);
     background-color: transparent;
   }
@@ -274,10 +284,8 @@ footer {
   .letra-emoji {
     background: transparent;
     border: none;
-    width: 3em;
+    width: 2.5em;
     font-size: 1rem;
-    
-    padding: 0.4rem;
     transform: scale(1.5);
   }
   h2 {
