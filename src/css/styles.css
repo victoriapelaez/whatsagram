@@ -235,7 +235,7 @@ footer {
   text-transform: uppercase;
 }
 
-@media (min-width: 361px) {
+@media (min-width: 900px) {
   .principal-container {
     display: grid;
     grid-template-columns: 30% 40% 30%;
