@@ -1,7 +1,6 @@
-var hour = new Date();
-var date = new Date();
+
 let controlInfiniteMayus = false;
-var letras = document.querySelectorAll(".letra");
+let letras = document.querySelectorAll(".letra");
 
 /*selecciono todas las letras que tienen la clase letra
  *recorro mi colección de letras anterior, sacando cada letra de la coleccion
@@ -26,6 +25,9 @@ letras.forEach((letra) => {
 
 //funcion principal de todo lo q hara al enviar
 document.getElementById("enviar").onclick = function () {
+  //estas variables las pongo aqui para que a actualice la fecha y hora en cada click, poniendolo arriba solo pillaba la hora en la que caragaba la pagina
+  let hour = new Date();
+let date = new Date();
   //añadir fecha y convertir numero mes en mes
   var meses = [
     "Enero",
@@ -94,10 +96,7 @@ document.getElementById("→").onclick = function () {
 //funcion borrar ultima letra
 document.getElementById("←").onclick = function () {
   let recuadroInput = document.getElementById("recuadro-escribir").value;
-  document.getElementById("recuadro-escribir").value = recuadroInput.substring(
-    0,
-    recuadroInput.length - 1
-  );
+  document.getElementById("recuadro-escribir").value = recuadroInput.substring(0,recuadroInput.length - 1);
 };
 
 //funcion saltos de linea
@@ -128,20 +127,20 @@ document.getElementById("Mayus").onclick = function () {
   }
 };
 
-//escucha una letra para q se ponga en minuscula
 
 document.getElementById("emoji").addEventListener("click", function emoji() {
   var icono = document.getElementById("emoji");
   icono.classList.toggle("icono-cara");
   if (icono.classList.contains("icono-cara")) {
     icono.setAttribute("value", "\u2328");
-    document.getElementById("area-emoji").style.display = "inline";
-    document.getElementById("area-letras").style.display = "none";
+    document.getElementById("area-emoji").style.display = "contents";
+    document.getElementById("teclado").style.display="none"
   } else {
     icono.setAttribute("value", "😀");
     document.getElementById("area-emoji").style.display = "none";
-    document.getElementById("area-letras").style.display = "inline";
+    document.getElementById("teclado").style.display="contents"
   }
+  
 });
 
 window.addEventListener("load", function () {

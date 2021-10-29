@@ -71,7 +71,6 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .container-recuadros {
@@ -112,7 +111,6 @@ main {
   font-size: 2em;
   color: rgb(204, 204, 204);
   padding-bottom: 0.2em;
-  
 }
 .emoji-container {
   display: none;
@@ -124,9 +122,7 @@ main {
   flex-wrap: 1;
   overflow: auto;
 }
-.emojis:hover {
-  transform: scale(2);
-}
+
 .recuadro-escribir {
   font-family: "Roboto", sans-serif;
   background-color: #173841;
@@ -142,6 +138,24 @@ main {
   overflow: auto;
   margin-right: 1em;
 }
+.container-recuadros::-webkit-scrollbar {
+  background-color: #3d3f42;
+  border-radius: 10px;
+}
+.container-recuadros::-webkit-scrollbar-thumb {
+  background-color: #127262;
+  border-radius: 10px;
+}
+
+
+.recuadro-escribir::-webkit-scrollbar {
+  background-color: #3d3f42;
+  border-radius: 5px;
+}
+.recuadro-escribir::-webkit-scrollbar-thumb {
+  background-color: #127262;
+  border-radius: 5px;
+}
 
 .boton-enviar {
   background-color: #2522ca;
@@ -149,7 +163,7 @@ main {
   font-size: 1em;
   border-radius: 1em;
   color: white;
-margin-right: 0.5em;
+  margin-right: 0.5em;
   width: 2em;
   height: 2em;
 }
@@ -165,15 +179,10 @@ margin-right: 0.5em;
 }
 
 audio {
-  /* filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%); */
   width: 200px;
   height: 25px;
- 
 }
-.area-emoji{
-  display: none;
 
-}
 /* Estilo para items del footer-keyboard */
 footer {
   grid-column-start: 2;
@@ -189,29 +198,32 @@ footer {
   background-color: #1d1e1f;
   height: 20vh;
 }
-.area-1,
-.area-2,
-.area-3,
-.area-4,
-.area-5 {
-  display: flex;
+.teclado {
+  display: contents;
 }
-
+.area-emoji {
+  display: none;
+}
+.letra-emoji {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+}
 .letra {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   border-radius: 5px;
-  background-color: #3d3f42;
+  background-color: transparent;
   color: white;
 }
 .tecla-funcion {
   border-radius: 5px;
-  background-color: #3d3f42;
+  background-color: transparent;
   color: white;
 }
 #space {
   width: 50vw;
-  background-color: #3d3f42;
+  background-color: transparent;
 }
 .tecla-funcion:hover,
 .letra:hover {
@@ -219,11 +231,11 @@ footer {
   transform: scale(1.2);
 }
 
-.clase-mayus{
+.clase-mayus {
   text-transform: uppercase;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 361px) {
   .principal-container {
     display: grid;
     grid-template-columns: 30% 40% 30%;
@@ -236,21 +248,36 @@ footer {
     height: 62vh;
   }
   .keyboard-area {
-    height: 30vh;
-    padding-left: 5%;
-    padding-right: 5%;
+    height: 24vh;
+    row-gap: 1em;
   }
   #space {
     width: 20vw;
+    background-color: transparent;
   }
   .letra {
     width: 2.5vw;
+    transform: scaleY(1.4);
+    background-color: transparent;
   }
   .tecla-funcion {
     width: 5vw;
+    transform: scaleY(1.4);
+    background-color: transparent;
   }
-  i{
+  i {
     font-size: 1.5em;
   }
-  
+  .letra-emoji {
+    background: transparent;
+    border: none;
+    width: 3em;
+    font-size: 1rem;
+    
+    padding: 0.4rem;
+    transform: scale(1.5);
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
 }
