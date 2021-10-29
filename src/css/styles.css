@@ -57,7 +57,7 @@ main {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  height: 66vh;
+  height: 67vh;
   background-size: cover;
   background-image: url(../images/fondo_translucido.png);
   background-position: bottom;
