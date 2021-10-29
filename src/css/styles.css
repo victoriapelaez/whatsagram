@@ -221,12 +221,15 @@ footer {
   background-color: transparent;
   color: white;
 }
+
 #space {
-  width: 50vw;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  width: 15vw; 
   background-color: transparent;
 }
 .tecla-funcion:hover,
-.letra:hover {
+.letra:hover, #space:hover {
   background-color: rgb(37, 37, 92);
   transform: scale(1.2);
 }
@@ -252,7 +255,7 @@ footer {
     row-gap: 1em;
   }
   #space {
-    width: 20vw;
+    /* width: 20vw; */
     background-color: transparent;
   }
   .letra {
