@@ -26,7 +26,7 @@ letras.forEach((letra) => {
 //funcion principal de todo lo q hara al enviar
 document.getElementById("enviar").onclick = function () {
   //estas variables las pongo aqui para que a actualice la fecha y hora en cada click, poniendolo arriba solo pillaba la hora en la que caragaba la pagina
-  let hour = new Date();
+let hour = new Date();
 let date = new Date();
   //añadir fecha y convertir numero mes en mes
   var meses = [
@@ -147,6 +147,8 @@ window.addEventListener("load", function () {
   document.getElementById("boton-micro").addEventListener("click", sonarAudio);
 });
 function sonarAudio() {
+  //estas variables las pongo aqui para que a actualice la fecha y hora en cada click, poniendolo arriba solo pillaba la hora en la que caragaba la pagina
+let hour = new Date();
   document.querySelector(".container-recuadros").innerHTML += `<div class="message">
   <div class="texto-message">
   <audio src="audio/feliz_halloween.mp3" id="audio-micro" controls></audio>
