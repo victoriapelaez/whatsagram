@@ -124,7 +124,7 @@ main {
 .recuadro-escribir {
   font-family: "Roboto", sans-serif;
   background-color: white;
-  border-color: white;
+  border:none;
   color: rgb(107, 86, 122);
   flex-basis: 50%;
   height: 1.2em;
@@ -153,11 +153,20 @@ main {
   width: 0.5em;
 }
 .recuadro-escribir::-webkit-scrollbar-thumb {
-  background-color: rgb(162, 142, 177);
+  background-color: rgb(68, 38, 90);
   border-radius: 5px;
   width: 0.5em;
 }
-.boton-emoji {
+
+.bombilla-off{
+  border-color: transparent;
+  background: inherit;
+  font-size: 1.6em;
+  color: rgb(204, 204, 204);
+  padding-bottom: 0.2em;
+  filter:grayscale(1) ;
+}
+.boton-emoji, .bombilla-on {
   border-color: transparent;
   background: inherit;
   font-size: 1.6em;

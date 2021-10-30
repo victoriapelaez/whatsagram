@@ -35,7 +35,7 @@
 - [x] Problema los emojis dejaron de pintarse
 - [] hacer la release y poner en git enlace web
 - [x] cambiar estilo a algo mas colorido que me defina más
-- [] funcion modo dia/noche
+- [x] funcion modo dia/noche
 
 ##### Herramientas usadas externas
 [https://markdown.es/sintaxis-markdown/]
