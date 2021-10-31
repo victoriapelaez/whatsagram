@@ -6,23 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whatsagram</title>
-    <!---->
+    <!--Enlaces externos para fuentes e iconos-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!---->
+    <!--Enlace principal estilo del proyecto-->
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
-    <!---->
+    <!--Contenedor para englobar todo-->
     <div class="principal-container">
-        <!---->
+        <!--Contenedor para la cabecera del usuario con el que se chatea, incluye foto, nombre e iconos-->
         <header class="header-area" id="header-area" >
-            <!---->
             <img src="./images/recorte selfie.png">
             <div class="user">
                 <h2>Antoni Amengual🎨</h2>
@@ -33,25 +32,27 @@
             <i class="fas fa-ellipsis-v"></i>
 
         </header>
-        <!---->
+
+        <!--Contenedor para mensajes y fecha del chat-->
         <main class="messaging-area" id="messaging-area">
             <div class="container-recuadros" >
                 <div id="recuadro-fecha" class="recuadro-fecha"></div>
             </div>
-            <!--Recuadro conversacion donde llegan los mensajes-->
+
+            <!--contenedor para botones(emojis, modo oscuro, enviar, micro) y recuadro inicial de escritura-->
             <div class="text-area">
                 <input type="button" name="Emoticonos" value="😀" class="boton-emoji" id="emoji"></input>
                 <input type="button" name="modo-oscuro" value="&#128161" class="bombilla-on" id="bombilla"></input>
-                <!--Boton con emoticonos-->
                 <textarea class="recuadro-escribir" id="recuadro-escribir" placeholder="Mensaje"></textarea>
-                <!--Recuadro donde se escriben las letras al pulsar-->
                 <input type="button" name="Enviar" value="&#x27A4" id="enviar" class="boton-enviar"></input>
-                <!--Boton que envia a la messaging area-->
                 <input type="button" name="micro" value="&#xf130" class="fa" id="boton-micro"></input>
             </div>
         </main>
 
+        <!--contenedor para el teclado-->
         <footer class="keyboard-area" id="keyboard-area">
+
+            <!--contenedor botones emoji-->
             <div class="area-emoji" id="area-emoji">
                 <div class="emojis" id="emojis">
                     <input type="button" value="&#128514" class="letra letra-emoji">
@@ -98,7 +99,7 @@
                     <input type="button" value="&#128055" class="letra letra-emoji">
                 </div>
             </div>
-            <!-- <div class="area-teclado" id="area-teclado"> -->
+            <!--contenedor botones carácteres, botones funciones-->
             <div class="teclado" id="teclado">
                 <div class="area-teclado" id="area-letras">
                     <input type="button" value="1" class="letra">
@@ -113,7 +114,6 @@
                     <input type="button" value="0" class="letra">
                     <input type="button" value="&#8678" id="←" class="tecla-funcion">               
                 </div>
-
                 <div class="area-teclado">
                     <input type="button" value="q" class="letra">
                     <input type="button" value="w" class="letra">
@@ -127,7 +127,6 @@
                     <input type="button" value="p" class="letra">
                     <input type="button" value="&#8680" id="→" class="tecla-funcion">
                 </div>
-
                 <div class="area-teclado">
                     <input type="button" value="&#8679" id="Mayus" class="tecla-funcion">
                     <input type="button" value="a" class="letra">
@@ -141,7 +140,6 @@
                     <input type="button" value="l" class="letra">
                     <input type="button" value="ñ" class="letra">
                 </div>
-
                 <div class="area-teclado">
                     <input type="button" value="↵" id="↵" class="tecla-funcion">
                     <input type="button" value="z" class="letra">
@@ -155,19 +153,16 @@
                     <input type="button" value="." class="letra">
                     <input type="button" value="?" class="letra">
                 </div>
-
                 <div class="area-teclado">
                     <input type="button" value="C" id="C" class="tecla-funcion">
-                    <!--Tecla borra todo el texto-->
                     <input type="button" value=" " id="space" class="letra">
-                    <!--Tecla espacio-->
                     <input type="button" value="CE" id="CE" class="tecla-funcion">
-                    <!--Tecla borra ultima palabra-->
                 </div>
             </div>
         </footer>
     </div>
 </body>
+<!--Archivo externo algoritmo de la aplicación-->
 <script src="js/script.js"></script>
 
 </html>
