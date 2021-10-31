@@ -1,7 +1,7 @@
 body {
   margin: auto 0;
 }
-
+/*Estilo principal grid, columnas y filas y fuente importada y declaracion de altura y margen 0*/
 .principal-container {
   display: grid;
   grid-template-columns: 0px 1fr 0px;
@@ -10,53 +10,65 @@ body {
   margin: auto 0;
   height: 100vh;
 }
-/* Estilo para items del header-cabecera */
+
+/* Posicion del header, altura, color de fondo. Disposicion flex de sus items con espacio igul entre ellos */
 header {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  grid-column: 2/3;
+  grid-row: 1/2;
   height: 10vh;
   display: flex;
   background-color: #4d7470;
   justify-content: space-around;
 }
+
+/*Imagen icono destinatario*/
 img {
   width: 3rem;
   border-radius: 2em;
   align-self: center;
 }
+
+/*Disposición del nombre destinatario chat y en linea*/
 .user {
   display: flex;
   flex-direction: column;
   align-self: center;
   flex-basis: 40%;
 }
+
+/*Tamaño y color nombre destinatario*/
 h2 {
   color: white;
-
   font-size: 1rem;
   margin: 0;
 }
+
+/*Tamaño y color "en línea"*/
 h4 {
   margin: 0;
   color: white;
   font-size: 0.7rem;
 }
+
+/*Tamaño, color y centrado de los iconos de la cabecera*/
 i {
   color: white;
   align-self: center;
   font-size: 1em;
 }
+
+/*Clase icono teléfono*/
 .fa {
+  /*transformación para girar el icono como en una espejo para conseguir la orientación real*/
   transform: scaleX(-1);
 }
-/* Estilo para items del main-messaging */
+
+
+/* Posición de la zona de escritura de mensajes y mensajes, altura, color e imagen de fondo adaptada. 
+ * Disposición flex de sus items  */
 main {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-column: 2/3;
+  grid-row: 2/3;
   height: 67vh;
   background-size: cover;
   background-image: url(../images/fondo_translucido.png);
@@ -67,17 +79,15 @@ main {
   flex-direction: column;
 }
 
-.text-area {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
+/*Container flex para cada uno de los items (mensajes) que se vayan enviado*/
 .container-recuadros {
   display: flex;
   flex-direction: column;
+  /*Propiedad para hacer scroll cuando haya más mensajes que espacio vertical*/
   overflow: auto;
 }
+
+/*Container para el recuadro de la fecha en cada mensaje enviado*/
 .recuadro-fecha {
   font-family: "Roboto", sans-serif;
   background-color: white;
@@ -89,6 +99,8 @@ main {
   padding-right: 0.3em;
   font-weight: bold;
 }
+
+/*Container para el mensaje escrito enviado*/
 .message {
   font-family: "Roboto", sans-serif;
   border-radius: 1em;
@@ -100,31 +112,54 @@ main {
   color: #4d7470;
   display: flex;
 }
+
+/*Container del texto del mensaje enviado*/
 .texto-message {
   padding-right: 1em;
   padding-left: 0.3em;
 }
+
+/*Container de la hora del mensaje*/
 .recuadro-hora {
   font-size: 0.7em;
   color: #4d7470;
   align-self: flex-end;
 }
 
-.emoji-container {
-  display: none;
-  position: absolute;
-  z-index: 1;
-}
-.emoji-list {
+/*Container que contiene los botones y el texarea para escribir a enviar*/
+.text-area {
   display: flex;
-  flex-wrap: 1;
-  overflow: auto;
+  justify-content: space-around;
+  align-items: center;
 }
 
+/*Tamaño del reproductor al enviar mensaje audio*/
+audio {
+  width: 200px;
+  height: 25px;
+  background-color: inherit;
+}
+
+/*Tamaño, colores, padding de los botones emoji y bombilla encendida*/
+.boton-emoji,
+.bombilla-on {
+  border-color: transparent;
+  background: inherit;
+  font-size: 1.6em;
+  color: rgb(204, 204, 204);
+  padding-bottom: 0.2em;
+}
+
+/*Clase para quitar el color a la bombilla (apagarla) en el modo oscuro */
+.bombilla-off {
+  filter: grayscale(1);
+}
+
+/*Estilo textarea para escribir los mensajes a enviar*/
 .recuadro-escribir {
   font-family: "Roboto", sans-serif;
   background-color: white;
-  border:none;
+  border: none;
   color: rgb(107, 86, 122);
   flex-basis: 50%;
   height: 1.2em;
@@ -136,43 +171,8 @@ main {
   overflow: auto;
   margin-right: 1em;
 }
-.container-recuadros::-webkit-scrollbar {
-  background-color: rgb(107, 86, 122);
-  border-radius: 10px;
-  width: 0.5em;
-}
-.container-recuadros::-webkit-scrollbar-thumb {
-  background-color: rgb(162, 142, 177);
-  border-radius: 10px;
-  width: 0.5em;
-}
 
-.recuadro-escribir::-webkit-scrollbar {
-  background-color: rgb(107, 86, 122);
-  border-radius: 5px;
-  width: 0.5em;
-}
-.recuadro-escribir::-webkit-scrollbar-thumb {
-  background-color: rgb(68, 38, 90);
-  border-radius: 5px;
-  width: 0.5em;
-}
-
-.bombilla-off{
-  border-color: transparent;
-  background: inherit;
-  font-size: 1.6em;
-  color: rgb(204, 204, 204);
-  padding-bottom: 0.2em;
-  filter:grayscale(1) ;
-}
-.boton-emoji, .bombilla-on {
-  border-color: transparent;
-  background: inherit;
-  font-size: 1.6em;
-  color: rgb(204, 204, 204);
-  padding-bottom: 0.2em;
-}
+/*Estilo boton con icono enviar mensajes*/
 .boton-enviar {
   background-color: #4d7470;
   border: 0;
@@ -183,6 +183,8 @@ main {
   width: 2em;
   height: 2em;
 }
+
+/*Estilo boton con icono micro*/
 #boton-micro {
   background-color: #4d7470;
   margin-right: 1rem;
@@ -194,19 +196,32 @@ main {
   border: 0;
 }
 
-audio {
-  width: 200px;
-  height: 25px;
-  background-color: inherit;
-  
+/*Color y tamaños barras scroll de los textos a enviar y recuadro enviados*/
+.container-recuadros::-webkit-scrollbar {
+  background-color: rgb(107, 86, 122);
+  border-radius: 10px;
+  width: 0.5em;
+}
+.container-recuadros::-webkit-scrollbar-thumb {
+  background-color: rgb(162, 142, 177);
+  border-radius: 10px;
+  width: 0.5em;
+}
+.recuadro-escribir::-webkit-scrollbar {
+  background-color: rgb(107, 86, 122);
+  border-radius: 5px;
+  width: 0.5em;
+}
+.recuadro-escribir::-webkit-scrollbar-thumb {
+  background-color: rgb(68, 38, 90);
+  border-radius: 5px;
+  width: 0.5em;
 }
 
-/* Estilo para items del footer-keyboard */
+/* Posición del teclado, altura, color. Disposición flex de sus items  */
 footer {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
+  grid-column: 2/3;
+  grid-row: 3/4 ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,23 +231,18 @@ footer {
   background-color: #4d7470;
   height: 20vh;
 }
-.teclado {
-  display: contents;
-}
+
+/*Teclado de emojis inicialmente escondido*/
 .area-emoji {
   display: none;
 }
-.letra-emoji {
-  background: transparent !important;
-  border: none !important;
-  font-size: 1rem;
-  margin: 0.3rem;
-  padding: 0;
-}
-.icono-cara {
-  color: rgb(107, 86, 122);
+
+/*Distribucion del teclado de letras y funciones.*/
+.teclado {
+  display: contents;
 }
 
+/*Tamaños, colores y demás estilos de los botones letra*/
 .letra {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -242,7 +252,18 @@ footer {
   color: white;
   width: 1.5rem;
   height: 1.5rem;
+} 
+/*Atributo tamaño y espacios botones emoji*/
+.letra-emoji {
+  /*!important obliga a que se cumpla, ya que heredaba de letra y no lo cogía*/
+  background: transparent !important;
+  border: none !important;
+  font-size: 1rem;
+  margin: 0.3rem;
+  padding: 0;
 }
+
+/*Tamaños, colores y demás estilos de los botones tecla función*/
 .tecla-funcion {
   border-radius: 5px;
   border-style: solid;
@@ -252,6 +273,7 @@ footer {
   height: 1.5rem;
 }
 
+/*Tamaño, color y demás del boton tecla espace*/
 #space {
   margin-left: 1.5em;
   margin-right: 1.5em;
@@ -259,6 +281,8 @@ footer {
   background-color: rgb(107, 86, 122);
   border-style: solid;
 }
+
+/*Efecto al pasar por encima en los botones, cambio de color y tamaño letra*/
 .tecla-funcion:hover,
 .letra:hover,
 #space:hover {
@@ -266,57 +290,60 @@ footer {
   transform: scale(1.2);
 }
 
-.clase-mayus {
-  text-transform: uppercase;
-}
-
+/*Reglas para pantallas grandes, minimo establecido, colocación de las columnas*/
 @media (min-width: 900px) {
   .principal-container {
     display: grid;
     grid-template-columns: 30% 40% 30%;
-    
   }
+
+/*Tamaño vertical cabecerea*/
   .header-area {
     height: 10vh;
     justify-content: space-evenly;
   }
+
+/*Tamaño vertical area mensajes a enviar y enviados*/
   main {
     height: 59vh;
   }
+
+/*Tamaño vertical y espacios entre filas del teclado*/
   .keyboard-area {
     height: 27vh;
     row-gap: 1em;
   }
-  
+
+/*Tamaño ancho de la tecla espacio*/
   #space {
     width: 17rem;
-    background-color: rgb(107, 86, 122);
-    border-style: solid;
   }
+
+/*Tamaños botones letras */
   .letra {
     width: 2.3rem;
     transform: scaleY(1.4);
-    background-color: rgb(107, 86, 122);
-    border-style: solid;
-    color: white;
   }
+
+/*Tamaños botones funciones*/
   .tecla-funcion {
     width: 5rem;
     transform: scaleY(1.4);
-    background-color: rgb(107, 86, 122);
-    border-style: solid;
-    color: white;
   }
+
+  /*Tamaño iconos*/
   i {
     font-size: 1.5em;
   }
+
+  /*Tamaño botones emoji*/
   .letra-emoji {
-    background: transparent !important;
-    border: none !important;
     width: 2.5em;
     font-size: 1rem;
     transform: scale(1.5);
   }
+
+  /*Tamaño nombre destinatario cabecera*/
   h2 {
     font-size: 1.2rem;
   }
