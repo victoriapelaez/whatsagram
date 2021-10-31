@@ -52,15 +52,27 @@ Como sorpresa final, un pequeño audio incrustado al apretar el micro, para simu
 ##### Herramientas usadas externas
 
 [https://markdown.es/sintaxis-markdown/]
+
 [https://www.javatpoint.com/javascript-onclick-event]
+
 [https://lenguajecss.com/css/maquetacion-y-colocacion/flexbox/]
+
 [https://css-tricks.com/snippets/css/complete-guide-grid/]
+
 [https://lemoncode.net/lemoncode-blog/2017/9/5/introduccion-programacion-funcional-javascript]
+
 [https://www.digitalocean.com/community/tutorials/como-modificar-atributos-clases-y-estilos-en-el-dom-es]
+
 [https://www.w3schools.com/charsets/ref_emoji.asp]
+
 [https://www.peko-step.com/es/tool/alphachannel.html]
+
 [https://www.it-swarm-es.com/es/css/css-para-evitar-que-el-elemento-hijo-herede-los-estilos-principales/971827137/]
+
 [https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity]
+
 [https://www.campusmvp.es/recursos/post/como-personalizar-los-estilos-css-de-las-barras-de-scroll.aspx]
+
 [https://donnierock.com/2019/02/06/javascript-funciones-queryselector-y-queryselectorall/]
+
 [https://css-tricks.com/snippets/javascript/loop-queryselectorall-matches/]
